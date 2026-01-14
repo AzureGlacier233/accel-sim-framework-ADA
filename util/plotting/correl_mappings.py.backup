@@ -14,7 +14,6 @@ config_maps = {
     "RTX3070": set("GeForce RTX 3070"),
     "A100": set("NVIDIA A100 80GB"),
     "H100" : set("NVIDIA H100 80GB HBM3"),
-    "RTX4090": set("GeForce RTX 4090"),
 }
 
 
@@ -559,18 +558,5 @@ correl_list = [
         drophwnumbelow=0,
         plottype="linear",
         stattype="rate",
-    ),
-    # 2520 MHz (RTX 4090 boost clock)
-    CorrelStat(
-        chart_name="Cycles",
-        plotfile="rtx4090-cycles",
-        hw_eval='np.average(hw["Duration"])*2520',
-        hw_error='np.max(hw["Duration"])*2520 - np.average(hw["Duration"])*2520,'
-        + 'np.average(hw["Duration"])*2520 - np.min(hw["Duration"])*2520',
-        sim_eval='float(sim["gpu_tot_sim_cycle\s*=\s*(.*)"])',
-        hw_name="GeForce RTX 4090",
-        drophwnumbelow=0,
-        plottype="log",
-        stattype="counter",
     ),
 ]
