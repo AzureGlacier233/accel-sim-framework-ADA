@@ -128,8 +128,8 @@
 - T4 ldst 接入（load 优先）：完成
 - T5 统计与日志：完成
 - T6 策略引擎（3 策略 + MC 策略）：完成
-- T7 cluster sweep 支持：未单独提供自动化脚本（可用现有配置手动改）
-- T8 实验自动化脚本：未实现
+- T7 cluster sweep 支持：完成（`util/m3d_experiments/run_m3d_experiments.py`）
+- T8 实验自动化脚本：完成（矩阵生成 + run.sh + summary.csv 汇总）
 - T9 DRAM backend 抽象：未实现
 - T10 Ramulator backend：未实现
 
@@ -156,4 +156,3 @@ git -C /home/zhanglx/accel-sim-framework/gpu-simulator/gpgpu-sim show --name-sta
 # 查看 L1.5 / M3D 参数是否在配置中
 rg -n "gpgpu_l15|m3d" /home/zhanglx/accel-sim-framework/gpu-simulator/configs/tested-cfgs/SM89_RTX4090/gpgpusim.config
 ```
-

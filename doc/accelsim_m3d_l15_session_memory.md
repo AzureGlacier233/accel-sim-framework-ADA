@@ -77,12 +77,15 @@
 3. MC 级映射策略（含 region table）
 4. M3D-aware FRFCFS 调度评分分支
 5. 对应配置项接入与日志打印
+6. 自动化实验驱动脚本（T7/T8）：
+   - `util/m3d_experiments/run_m3d_experiments.py`
+   - `util/m3d_experiments/README.md`
+   - `util/m3d_experiments/examples/m3d_region_policy_example.csv`
 
 ### 未实现
 
-1. 自动化实验驱动脚本（T7/T8）
-2. Ramulator backend 抽象与接入（T9/T10）
-3. 完整编译/回归验证（环境缺失 `nvcc`）
+1. Ramulator backend 抽象与接入（T9/T10）
+2. 完整编译/回归验证（环境缺失 `nvcc`）
 
 ---
 
@@ -111,4 +114,3 @@ git -C /home/zhanglx/accel-sim-framework/gpu-simulator/gpgpu-sim show --name-sta
 /home/zhanglx/accel-sim-framework/doc/accelsim_m3d_l15_session_memory.md 继续工作。
 先检查根仓库与 gpgpu-sim 子仓库状态，再在不破坏现有提交 d774e9f / 9f761655 的前提下推进下一步。
 ```
-
